@@ -25,7 +25,7 @@ const Navbar = () => {
                     }}
                 >
                     <p className='text-[18px] font-bold cursor-pointer'>
-                        Lauren Fleming
+                        Home
                         <span className="sm:block hidden"></span>
                     </p>
                 </Link>
