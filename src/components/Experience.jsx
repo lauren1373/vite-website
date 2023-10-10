@@ -8,7 +8,7 @@ import { styles } from '../styles'
 
 const ExperienceCard = ({ experience }) => (
     <VerticalTimelineElement
-      contentStyle={{ background: '#fff5d6', color: '#fff' }}
+      contentStyle={{ background: '#fff5d6', color: '#130e01' }}
       contentArrowStyle={{ borderRight: '7px solid #232631' }}
       date={experience.date}
       iconStyle={{ background: experience.iconBg }}
@@ -30,7 +30,7 @@ const ExperienceCard = ({ experience }) => (
         >{experience.company_name}</p>
       </div>
   
-      <ul className="mt-5 list-disc ml-5 space-y-2">
+      <ul className="text-text mt-5 list-disc ml-5 space-y-2">
         {experience.points.map((point, index) => (
           <li 
             key={`experience-point-${index}`}
