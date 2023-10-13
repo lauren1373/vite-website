@@ -1,4 +1,4 @@
-import { OfficeDepot, wcu } from '../assets'
+import { Bash, C, CSS, Git, HTML, Java, JavaScript, Mips, OfficeDepot, Python, Rust, SQL, VSC, wcu } from '../assets'
 
 export const navLinks = [
     {
@@ -22,7 +22,7 @@ export const experiences = [
         icon: wcu,
         iconBg: "#fff5d6",
         date: "August 2019 - May 2023",
-        points: ["--"],
+        points: ["Developed projects in various languages during four years of study", "Learned "],
     },
     {
         title: "Sales Associate",
@@ -30,6 +30,57 @@ export const experiences = [
         icon: OfficeDepot,
         iconBg: "#fff5d6",
         date: "September 2023 - Present",
-        points: ["--"],
+        points: ["--"]//["Working with the public to find solutions to their problems", "Collaborating with team members"],
+    },
+];
+
+export const skill_list = [
+    {
+        title: "Java",
+        icon: Java,
+    },
+    {
+        title: "Python",
+        icon: Python,
+    },
+    {
+        title: "JavaScript",
+        icon: JavaScript
+    },
+    {
+        title: "Rust",
+        icon: Rust,
+    },
+    {
+        title: "SQL",
+        icon: SQL,
+    },
+    {
+        title: "C",
+        icon: C,
+    },
+    {
+        title: "Bash",
+        icon: Bash,
+    },
+    {
+        title: "HTML",
+        icon: HTML,
+    },
+    {
+        title: "CSS",
+        icon: CSS,
+    },
+    {
+        title: "MIPS",
+        icon: Mips,
+    },
+    {
+        title: "VS Code",
+        icon: VSC,
+    },
+    {
+        title: "GitHub",
+        icon: Git,
     },
 ];
