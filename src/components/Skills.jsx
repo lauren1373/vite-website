@@ -60,12 +60,18 @@ const Skills = () => {
     return (
         <>
 
-            <motion.div variants={textVariant()}>
-                <div className={styles.sectionHeadText}>Skills</div>
-            </motion.div>
+            {isNotMobile &&
+                <motion.div variants={textVariant()}>
+                    <div className={styles.sectionHeadText}>Skills</div>
+                </motion.div>
+            }
 
             {isMobile &&
-                <div className="flex flex-col">
+                <div className={styles.sectionHeadText}>Skills</div>
+            }
+
+            {isMobile &&
+                <div className="mt-10 flex flex-col">
                     {skill_list.map((skill, index) => (
                     <SkillsCard2 key={skill.title} index={index} {...skill} />
                     ))}
