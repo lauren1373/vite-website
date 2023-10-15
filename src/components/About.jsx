@@ -16,6 +16,7 @@ const About = () => {
             >
                 Graduate of Computer Science with experience in Full Stack Development. Looking for a role where I can grow and learn from experienced team members while drawing on project experience I have already successfully executed.
             </motion.p>
+
         </>
     )
 }

@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import { styles } from "../styles"
 import { fadeIn, textVariant } from "../utils/motion"
 import { skill_list } from "../constants"
+import { useMediaQuery } from 'react-responsive'
 import Tilt from 'react-parallax-tilt'
 import React from "react"
 
@@ -21,7 +22,29 @@ const SkillsCard = ({ index, title, icon }) => {
                     }}
                     className="bg-secondary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
                 >
-                    <img src={icon} alt={title} className="w-30 h-20 object-contain"/>
+                    <img src={icon} alt={title} className="w-30 h-20 sm:w-20 sm:h-20 object-contain"/>
+                    <h3>{title}</h3>
+                </div>
+            </motion.div>
+        </Tilt>
+    )
+}
+
+const SkillsCard2 = ({ index, title, icon }) => {
+    return (
+        <Tilt className="w-full">
+            <motion.div
+                className="w-full p-[1px] rounded-[20px] bg-accent my-5"
+            >
+                <div
+                    options={{
+                        max: 10,
+                        scale: 1, 
+                        speed: 450
+                    }}
+                    className="bg-secondary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
+                >
+                    <img src={icon} alt={title} className="w-30 h-20 sm:w-20 sm:h-20 object-contain"/>
                     <h3>{title}</h3>
                 </div>
             </motion.div>
@@ -30,17 +53,32 @@ const SkillsCard = ({ index, title, icon }) => {
 }
 
 const Skills = () => {
+
+    const isMobile = useMediaQuery({ query: '(max-width: 680px)' })
+    const isNotMobile = useMediaQuery({ query: '(min-width: 681px)' })
+
     return (
         <>
+
             <motion.div variants={textVariant()}>
-                <h2 className={styles.sectionHeadText}>Skills</h2>
+                <div className={styles.sectionHeadText}>Skills</div>
             </motion.div>
 
-            <div className="mt-10 flex flex-wrap gap-10">
+            {isMobile &&
+                <div className="flex flex-col">
+                    {skill_list.map((skill, index) => (
+                    <SkillsCard2 key={skill.title} index={index} {...skill} />
+                    ))}
+                </div>
+            }
+
+            {isNotMobile &&
+                <div className="mt-10 flex flex-wrap gap-10">
                 {skill_list.map((skill, index) => (
                     <SkillsCard key={skill.title} index={index} {...skill} />
                 ))}
-            </div>
+                </div>
+            }
 
         </>
     )
