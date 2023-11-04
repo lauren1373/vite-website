@@ -9,6 +9,7 @@ export default {
         'primary': '#ff8400',
         'secondary': '#fff5d6',
         'accent': '#cf4307',
+        'accent-op': 'rgb(207, 67, 7, 0.8)',
        },
        boxShadow: {
         card: "0px 35px 120px -15px #211e35",
