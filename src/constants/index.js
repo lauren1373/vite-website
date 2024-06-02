@@ -22,7 +22,11 @@ export const experiences = [
         icon: wcu,
         iconBg: "#fff5d6",
         date: "August 2019 - May 2023",
-        points: ["Developed projects in various languages during 4 years of study", "Learned core concepts witin Computer Science and practiced them in projects or labs", "Collaborated with groups of 2 to 4 people to complete projects", "During the final year of study I worked on my capstone alone which consisted of creating a website for notable individuals within the Computer Science and Math fields", "Other skills I learned at Western that are not listed above are Android development using Java, Design patterns, Object Oriented Programming (OOP), Version control, and the Software Development Life Cycle to name a few"],
+        points: ["Developed projects in various languages during four years of study", 
+                    "Learned core concepts witin Computer Science and practiced them in projects or labs", 
+                    "Collaborated with groups of two to four people to complete projects", 
+                    "During the final year of study I worked on my capstone alone which consisted of creating a website for notable individuals within the Computer Science and Math fields", 
+                    "Other skills I learned at Western that are not listed above are Android development using Java, Design patterns, Object Oriented Programming (OOP), Version control, and the Software Development Life Cycle to name a few"],
     },
     // {
     //     title: "Sales Associate",
